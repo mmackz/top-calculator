@@ -1,3 +1,99 @@
+* {
+   box-sizing: border-box;
+}
+
 body {
    margin: 0;
+   display: grid;
+   place-items: center;
+   min-height: 100vh;
+   background-color: #f1f1f1;
+}
+
+main {
+   border-radius: 8px;
+   box-shadow: 0 0 20px 0 #4e4e4ea2;
+}
+
+.screen {
+   width: 320px;
+   height: 140px;
+   color: #fefefe;
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   background: hsla(335, 70%, 61%, 1);
+   background: linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+   background: -moz-linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+   background: -webkit-linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+}
+
+.buttons {
+   height: 400px;
+   width: 320px;
+   display: flex;
+   flex-wrap: wrap;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
+   overflow: hidden;
+}
+
+.button {
+   width: 25%;
+   height: 20%;
+   background: #fefefe;
+   display: grid;
+   place-items: center;
+   font-size: 1.25rem;
+   font-weight: bold;
+}
+
+.w-2 {
+   width: 50%;
+}
+
+.operator {
+   background: #efefef;
+}
+
+.equals {
+   background: hsla(335, 70%, 61%, 1);
+   background: linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+   background: -moz-linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+   background: -webkit-linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+   color: #fefefe;
+}
+
+.power {
+   color: #d7658f;
+   font-weight: bold;
 }
