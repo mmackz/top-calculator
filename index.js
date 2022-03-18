@@ -9,13 +9,14 @@ const allButtons = document.querySelectorAll(".button");
 let firstNum = "";
 let operator = "";
 let lastNum = "";
+let lastPressed = "";
 
 // default values for display
 subDisplayEl.innerText = firstNum;
-mainDisplayEl.innerText = firstNum;
+mainDisplayEl.innerText = "0";
 
 function updateDisplay() {
-   firstNum = calculate(firstNum, lastNum, operator);
+   firstNum = calculate(firstNum, lastNum, operator).toString();
    lastNum = "";
    mainDisplayEl.innerText = firstNum;
 }
@@ -30,7 +31,7 @@ allButtons.forEach((button) => {
          firstNum = "";
          operator = "";
          lastNum = "";
-         mainDisplayEl.innerText = "";
+         mainDisplayEl.innerText = "0";
       }
 
       // if delete button is pressed
@@ -46,7 +47,11 @@ allButtons.forEach((button) => {
 
       // if input is a number
       if (Number.isInteger(+value)) {
-         if (lastNum && lastNum === "0") {
+         if (lastPressed == "equals") {
+            firstNum = value;
+            operator = "";
+            lastNum = "";
+         } else if (lastNum && lastNum === "0") {
             lastNum = value;
          } else if (!operator && firstNum === "0") {
             firstNum = value;
@@ -59,15 +64,19 @@ allButtons.forEach((button) => {
 
       // if input is a decimal
       if (value === "decimal") {
-         if (operator && !lastNum.includes(".")) {
+         if (lastPressed == "equals") {
+            firstNum = "0.";
+            operator = "";
+            lastNum = "";
+         } else if (operator && !lastNum.includes(".")) {
             if (!lastNum) {
-               lastNum = "0."
+               lastNum = "0.";
             } else {
                lastNum += ".";
             }
          } else if (!operator && !firstNum.includes(".")) {
             if (!firstNum) {
-               firstNum = "0."
+               firstNum = "0.";
             } else {
                firstNum += ".";
             }
@@ -84,7 +93,7 @@ allButtons.forEach((button) => {
 
       if (value === "multiply") {
          if (lastNum) {
-            updateDisplay()
+            updateDisplay();
          }
          operator = "*";
       }
@@ -106,9 +115,38 @@ allButtons.forEach((button) => {
       if (value === "equals") {
          if (firstNum && lastNum && operator) {
             mainDisplayEl.innerText = calculate(firstNum, lastNum, operator);
+         } else {
+            mainDisplayEl.innerText = firstNum || "0";
          }
       }
 
-      subDisplayEl.innerText = `${firstNum} ${operator} ${lastNum}`;
+      if (mainDisplayEl.innerText.length > 10) {
+         if (!mainDisplayEl.classList.contains("small")) {
+            mainDisplayEl.classList.add("small");
+         }
+      } else {
+         mainDisplayEl.classList.remove("small");
+      }
+
+      if (subDisplayEl.innerText.length > 20) {
+         if (!subDisplayEl.classList.contains("st-small")) {
+            subDisplayEl.classList.add("st-small");
+         }
+      } else {
+         subDisplayEl.classList.remove("st-small");
+      }
+
+      if (subDisplayEl.innerText.length > 32) {
+         alert("Input is too long!!");
+         firstNum = "";
+         operator = "";
+         lastNum = "";
+         mainDisplayEl.innerText = "0";
+      }
+
+      subDisplayEl.innerText = `${firstNum} ${operator
+         .replace("*", "x")
+         .replace("/", "÷")} ${lastNum}`;
+      lastPressed = value;
    });
 });
