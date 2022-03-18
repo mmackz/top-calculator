@@ -42,6 +42,23 @@ main {
    );
 }
 
+.main-display {
+   height: 100px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   font-size: 3rem;
+   padding: 0 1rem;
+}
+
+.sub-display {
+   height: 40px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 0 1.2rem 1rem;
+}
+
 .buttons {
    height: 400px;
    width: 320px;
@@ -96,4 +113,6 @@ main {
 .power {
    color: #d7658f;
    font-weight: bold;
+   border-right: 1px solid #d7658f;
+   border-bottom: 1px solid #d7658f;
 }
