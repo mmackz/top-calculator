@@ -8,35 +8,40 @@
          src="https://kit.fontawesome.com/6faef4fc76.js"
          crossorigin="anonymous"
       ></script>
+      <script src="math.js" defer></script>
+      <script src="index.js" defer></script>
       <link rel="stylesheet" href="style.css">
       <title>TOP: Calculator</title>
    </head>
    <body>
       <main>
-         <div class="screen"></div>
+         <div class="screen">
+            <div class="main-display" id="main-display"></div>
+            <div class="sub-display" id="sub-display"></div>
+         </div>
          <div class="buttons">
-            <div class="button w-2 power" id="power">AC</div>
-            <div class="button operator" id="delete"><i class="fa-solid fa-delete-left"></i></div>
-            <div class="button operator" id="divide"><i class="fa-solid fa-divide"></i></div>
+            <div class="button w-2 power" id="power" data-value="power">AC</div>
+            <div class="button operator" id="delete" data-value="delete"><i class="fa-solid fa-delete-left"></i></div>
+            <div class="button operator" id="divide" data-value="divide"><i class="fa-solid fa-divide"></i></div>
 
-            <div class="button number" data-num="7">7</div>
-            <div class="button number" data-num="8">8</div>
-            <div class="button number" data-num="9">9</div>
-            <div class="button operator" id="multiply"><i class="fa-solid fa-xmark"></i></div>
+            <div class="button number" data-value="7">7</div>
+            <div class="button number" data-value="8">8</div>
+            <div class="button number" data-value="9">9</div>
+            <div class="button operator" id="multiply" data-value="multiply"><i class="fa-solid fa-xmark"></i></div>
 
-            <div class="button number" data-num="4">4</div>
-            <div class="button number" data-num="5">5</div>
-            <div class="button number" data-num="6">6</div>
-            <div class="button operator" id="minus"><i class="fa-solid fa-minus"></i></div>
+            <div class="button number" data-value="4">4</div>
+            <div class="button number" data-value="5">5</div>
+            <div class="button number" data-value="6">6</div>
+            <div class="button operator" id="minus" data-value="minus"><i class="fa-solid fa-minus"></i></div>
 
-            <div class="button number" data-num="1">1</div>
-            <div class="button number" data-num="2">2</div>
-            <div class="button number" data-num="3">3</div>
-            <div class="button operator" id="plus"><i class="fa-solid fa-plus"></i></div>
+            <div class="button number" data-value="1">1</div>
+            <div class="button number" data-value="2">2</div>
+            <div class="button number" data-value="3">3</div>
+            <div class="button operator" id="plus" data-value="plus"><i class="fa-solid fa-plus"></i></div>
 
-            <div class="button operator" id="decimal">.</div>
-            <div class="button number" data-num="0">0</div>
-            <div class="button w-2 equals" id="equals"><i class="fa-solid fa-equals"></i></div>
+            <div class="button operator" id="decimal" data-value="decimal">.</div>
+            <div class="button number" data-value="0">0</div>
+            <div class="button w-2 equals" id="equals" data-value="equals"><i class="fa-solid fa-equals"></i></div>
          </div>
       </main>
    </body>
