@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
 * {
    box-sizing: border-box;
+}
+
+a, a:visited, a:hover, a:active {
+   color: inherit;
+   font-size: 1.15rem;
 }
 
 body {
@@ -8,11 +15,19 @@ body {
    place-items: center;
    min-height: 100vh;
    background-color: #f1f1f1;
+   font-family: "Fira Sans", sans-serif;
 }
 
 main {
    border-radius: 8px;
-   box-shadow: 0 0 20px 0 #4e4e4ea2;
+   box-shadow: 0 0 24px 0 #4e4e4eb0;
+}
+
+footer {
+   position: absolute;
+   bottom: 5%;
+   left: 50%;
+   transform: translateX(-50%);
 }
 
 .screen {
@@ -21,24 +36,11 @@ main {
    color: #fefefe;
    border-top-left-radius: 8px;
    border-top-right-radius: 8px;
-   background: hsla(335, 70%, 61%, 1);
+   background: rgb(86, 54, 220);
    background: linear-gradient(
-      45deg,
-      hsla(335, 70%, 61%, 1) 0%,
-      hsla(15, 79%, 64%, 1) 50%,
-      hsla(39, 93%, 57%, 1) 100%
-   );
-   background: -moz-linear-gradient(
-      45deg,
-      hsla(335, 70%, 61%, 1) 0%,
-      hsla(15, 79%, 64%, 1) 50%,
-      hsla(39, 93%, 57%, 1) 100%
-   );
-   background: -webkit-linear-gradient(
-      45deg,
-      hsla(335, 70%, 61%, 1) 0%,
-      hsla(15, 79%, 64%, 1) 50%,
-      hsla(39, 93%, 57%, 1) 100%
+      225deg,
+      rgba(86, 54, 220, 1) 0%,
+      rgba(238, 161, 249, 1) 100%
    );
 }
 
@@ -49,6 +51,8 @@ main {
    align-items: center;
    font-size: 3rem;
    padding: 0 1rem;
+   transform: translateY(8px);
+   text-shadow: 1px 1px rgba(65, 65, 65, 0.74);
 }
 
 .sub-display {
@@ -67,6 +71,7 @@ main {
    border-bottom-left-radius: 8px;
    border-bottom-right-radius: 8px;
    overflow: hidden;
+   user-select: none;
 }
 
 .button {
@@ -88,31 +93,44 @@ main {
 }
 
 .equals {
-   background: hsla(335, 70%, 61%, 1);
+   background: rgb(238, 161, 249);
    background: linear-gradient(
-      45deg,
-      hsla(335, 70%, 61%, 1) 0%,
-      hsla(15, 79%, 64%, 1) 50%,
-      hsla(39, 93%, 57%, 1) 100%
-   );
-   background: -moz-linear-gradient(
-      45deg,
-      hsla(335, 70%, 61%, 1) 0%,
-      hsla(15, 79%, 64%, 1) 50%,
-      hsla(39, 93%, 57%, 1) 100%
-   );
-   background: -webkit-linear-gradient(
-      45deg,
-      hsla(335, 70%, 61%, 1) 0%,
-      hsla(15, 79%, 64%, 1) 50%,
-      hsla(39, 93%, 57%, 1) 100%
+      225deg,
+      rgba(86, 54, 220, 1) 0%,
+      rgba(238, 161, 249, 1) 100%
    );
    color: #fefefe;
 }
 
 .power {
-   color: #d7658f;
+   color: rgb(238, 161, 249);
    font-weight: bold;
-   border-right: 1px solid #d7658f;
-   border-bottom: 1px solid #d7658f;
+   border-right: 1px solid rgb(238, 161, 249);
+   border-bottom: 1px solid rgb(238, 161, 249);
+}
+
+.small {
+   font-size: 1.5rem;
+}
+
+.st-small {
+   font-size: 0.75rem;
+}
+
+.number:hover {
+   color: rgb(86 54 220);
+}
+
+.button:active {
+   box-shadow: inset 0 0 3px 0 rgba(77, 77, 77, 0.753);
+}
+
+.operator:hover {
+   color: rgb(86 54 220);
+}
+
+@media (max-height: 700px) {
+   footer {
+      display: none;
+   }
 }
