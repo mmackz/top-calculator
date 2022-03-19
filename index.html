@@ -10,10 +10,18 @@
       ></script>
       <script src="math.js" defer></script>
       <script src="index.js" defer></script>
+      <script src="themes.js" defer></script>
       <link rel="stylesheet" href="style.css">
       <title>TOP: Calculator</title>
    </head>
    <body>
+      <div class="theme-container">
+         <p class="theme-title">themes</p>
+         <div data-solid="#eea1f9" data-secondary="#5636dc" class="set1 active"></div>
+         <div data-solid="#d7658f" data-secondary="#ed4783" class="set2"></div>
+         <div data-solid="#519ee3" data-secondary="#2360d1" class="set3"></div>
+         <div data-solid="#62cf91" data-secondary="#2e9c81" class="set4"></div>
+      </div>
       <main>
          <div class="screen">
             <div class="main-display" id="main-display"></div>
@@ -44,6 +52,6 @@
             <div class="button w-2 equals" id="equals" data-value="equals"><i class="fa-solid fa-equals"></i></div>
          </div>
       </main>
-      <footer><div>Made by: Mmackz <a href="https://github.com/Mmackz/top-calculator"><i class="fa-brands fa-github"></i></a></div></footer>
+      <footer><div>Made by: Mmackz <a href="https://github.com/Mmackz/top-calculator"><i class="icon fa-brands fa-github"></i></a></div></footer>
    </body>
 </html>

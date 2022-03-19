@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
 
+:root {
+   --bg-solid: #eea1f9;
+   --bg-secondary: #5636dc;
+   --bg-gradient: linear-gradient(
+      225deg,
+      rgba(86, 54, 220, 1) 0%,
+      rgba(238, 161, 249, 1) 100%
+   );
+}
+
 * {
    box-sizing: border-box;
 }
 
-a,
+a {
+   color: black;
+   transition: transform 300ms linear;
+}
+
 a:visited,
-a:hover,
 a:active {
    color: inherit;
    font-size: 1.15rem;
@@ -37,30 +50,26 @@ footer {
 
 .screen {
    width: 320px;
-   height: 140px;
+   height: 145px;
    color: #fefefe;
    border-top-left-radius: 8px;
    border-top-right-radius: 8px;
-   background: rgb(86, 54, 220);
-   background: linear-gradient(
-      225deg,
-      rgba(86, 54, 220, 1) 0%,
-      rgba(238, 161, 249, 1) 100%
-   );
+   background: var(--bg-solid);
+   background: var(--bg-gradient);
 }
 
 .main-display {
-   height: 100px;
+   height: 103px;
    display: flex;
    justify-content: flex-end;
    align-items: center;
    font-size: 3rem;
    padding: 0 1rem;
-   transform: translateY(8px);
+   transform: translateY(10px);
 }
 
 .sub-display {
-   height: 40px;
+   height: 42px;
    display: flex;
    justify-content: flex-end;
    align-items: center;
@@ -88,6 +97,10 @@ footer {
    font-weight: bold;
 }
 
+.number {
+   font-size: 1.3rem;
+}
+
 .w-2 {
    width: 50%;
 }
@@ -97,20 +110,16 @@ footer {
 }
 
 .equals {
-   background: rgb(238, 161, 249);
-   background: linear-gradient(
-      225deg,
-      rgba(86, 54, 220, 1) 0%,
-      rgba(238, 161, 249, 1) 100%
-   );
+   background: var(--bg-solid);
+   background: var(--bg-gradient);
    color: #fefefe;
 }
 
 .power {
-   color: rgb(238, 161, 249);
+   color: var(--bg-solid);
    font-weight: bold;
-   border-right: 1px solid rgb(238, 161, 249);
-   border-bottom: 1px solid rgb(238, 161, 249);
+   border-right: 1px solid var(--bg-solid);
+   border-bottom: 1px solid var(--bg-solid);
 }
 
 .small {
@@ -122,7 +131,7 @@ footer {
 }
 
 .number:hover {
-   color: rgb(86 54 220);
+   color: var(--bg-secondary);
 }
 
 .button:active {
@@ -130,7 +139,7 @@ footer {
 }
 
 .operator:hover {
-   color: rgb(86 54 220);
+   color: var(--bg-secondary);
 }
 
 .theme-container {
@@ -152,8 +161,8 @@ footer {
    margin: 0;
    text-transform: uppercase;
    text-decoration: underline;
-   letter-spacing: -1px;
-   font-size: 0.75rem;
+   letter-spacing: -0.5px;
+   font-size: 0.775rem;
    font-weight: bold;
    text-align: center;
    margin-bottom: -1rem;
@@ -192,13 +201,21 @@ footer {
    background: linear-gradient(
       225deg,
       hsla(99, 100%, 74%, 1) 0%,
-      hsla(162, 100%, 74%, 1) 100%
+      hsla(173, 100%, 35%, 1) 100%
    );
 }
 
 .active {
    box-shadow: 0 0 10px 0 rgba(211, 4, 183, 0.781);
    outline: 2px solid hotpink;
+}
+
+.icon {
+   transition: transform 300ms linear;
+}
+
+.icon:hover {
+   transform: scale(1.15) translateX(2px);
 }
 
 @media (max-width: 600px) {
