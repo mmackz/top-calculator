@@ -4,7 +4,10 @@
    box-sizing: border-box;
 }
 
-a, a:visited, a:hover, a:active {
+a,
+a:visited,
+a:hover,
+a:active {
    color: inherit;
    font-size: 1.15rem;
 }
@@ -13,9 +16,11 @@ body {
    margin: 0;
    display: grid;
    place-items: center;
-   min-height: 100vh;
+   height: 100vh;
+   min-height: 640px;
    background-color: #f1f1f1;
    font-family: "Fira Sans", sans-serif;
+   position: relative;
 }
 
 main {
@@ -52,7 +57,6 @@ footer {
    font-size: 3rem;
    padding: 0 1rem;
    transform: translateY(8px);
-   text-shadow: 1px 1px rgba(65, 65, 65, 0.74);
 }
 
 .sub-display {
@@ -127,6 +131,80 @@ footer {
 
 .operator:hover {
    color: rgb(86 54 220);
+}
+
+.theme-container {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-300px, -50%);
+}
+
+.theme-container > div {
+   height: 60px;
+   width: 60px;
+   margin: 1.5rem;
+   border: 3px solid black;
+   border-radius: 8px;
+}
+
+.theme-title {
+   margin: 0;
+   text-transform: uppercase;
+   text-decoration: underline;
+   letter-spacing: -1px;
+   font-size: 0.75rem;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: -1rem;
+}
+
+.set1 {
+   background: rgb(238, 161, 249);
+   background: linear-gradient(
+      225deg,
+      rgba(86, 54, 220, 1) 0%,
+      rgba(238, 161, 249, 1) 100%
+   );
+}
+
+.set2 {
+   background: hsla(335, 70%, 61%, 1);
+   background: linear-gradient(
+      45deg,
+      hsla(335, 70%, 61%, 1) 0%,
+      hsla(15, 79%, 64%, 1) 50%,
+      hsla(39, 93%, 57%, 1) 100%
+   );
+}
+
+.set3 {
+   background: hsla(221, 73%, 63%, 1);
+   background: linear-gradient(
+      225deg,
+      hsla(184, 70%, 54%, 1) 0%,
+      hsla(221, 73%, 63%, 1) 100%
+   );
+}
+
+.set4 {
+   background: hsla(99, 100%, 74%, 1);
+   background: linear-gradient(
+      225deg,
+      hsla(99, 100%, 74%, 1) 0%,
+      hsla(162, 100%, 74%, 1) 100%
+   );
+}
+
+.active {
+   box-shadow: 0 0 10px 0 rgba(211, 4, 183, 0.781);
+   outline: 2px solid hotpink;
+}
+
+@media (max-width: 600px) {
+   .theme-container {
+      display: none;
+   }
 }
 
 @media (max-height: 700px) {
