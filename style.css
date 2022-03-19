@@ -180,7 +180,7 @@ footer {
 .set2 {
    background: hsla(335, 70%, 61%, 1);
    background: linear-gradient(
-      45deg,
+      225deg,
       hsla(335, 70%, 61%, 1) 0%,
       hsla(15, 79%, 64%, 1) 50%,
       hsla(39, 93%, 57%, 1) 100%
@@ -190,7 +190,7 @@ footer {
 .set3 {
    background: hsla(221, 73%, 63%, 1);
    background: linear-gradient(
-      225deg,
+      45deg,
       hsla(184, 70%, 54%, 1) 0%,
       hsla(221, 73%, 63%, 1) 100%
    );
@@ -199,7 +199,7 @@ footer {
 .set4 {
    background: hsla(99, 100%, 74%, 1);
    background: linear-gradient(
-      225deg,
+      45deg,
       hsla(99, 100%, 74%, 1) 0%,
       hsla(173, 100%, 35%, 1) 100%
    );
