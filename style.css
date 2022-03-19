@@ -50,7 +50,7 @@ footer {
 
 .screen {
    width: 320px;
-   height: 145px;
+   height: 146px;
    color: #fefefe;
    border-top-left-radius: 8px;
    border-top-right-radius: 8px;
@@ -59,7 +59,7 @@ footer {
 }
 
 .main-display {
-   height: 103px;
+   height: 104px;
    display: flex;
    justify-content: flex-end;
    align-items: center;
