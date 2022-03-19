@@ -113,6 +113,10 @@ allButtons.forEach((button) => {
       }
 
       if (value === "equals") {
+         if (lastPressed == "equals") {
+            firstNum = mainDisplayEl.innerText;
+         }
+
          if (firstNum && lastNum && operator) {
             mainDisplayEl.innerText = calculate(firstNum, lastNum, operator);
          } else {
